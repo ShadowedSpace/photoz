@@ -3,6 +3,8 @@ header{
     font-size: 28px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-items: center;
+    margin: 4px;
+    background-color: darkgrey;
 }
 
 img{
