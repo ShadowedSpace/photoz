@@ -3,12 +3,12 @@ header{
     font-size: 28px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-items: center;
-    margin: 4px;
+    margin: 15px;
     background-color: darkgrey;
 }
 
 img{
-    width: 20%;
+    width: 40%;
     margin: auto;
 }
 
@@ -18,4 +18,5 @@ img{
 
 .button{
     float: right;
+    margin: 5px;
 }
