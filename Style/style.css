@@ -1,5 +1,7 @@
 header{
     width: 100%;
+    font-size: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     justify-content: left;
     align-items: center;
 }
