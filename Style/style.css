@@ -3,13 +3,18 @@ header{
     font-size: 28px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 15px;
-    background-color: darkgrey;
+    background-color: lightgray;
+}
+
+body{
+    background-color: antiquewhite;
 }
 
 img{
     width: 40%;
     margin: auto;
     display: block;
+    padding: 4px;
 }
 
 .home{
