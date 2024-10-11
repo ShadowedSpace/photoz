@@ -1,9 +1,11 @@
 header{
     width: 100%;
     font-size: 28px;
+    font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 15px;
     background-color: rgb(252, 221, 176);
+    box-sizing: border-box;
 }
 
 body{
