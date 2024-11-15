@@ -29,11 +29,11 @@ img{
     text-decoration: none;
 }
 
-.button-onhover{
+.button-onhover:hover{
     color: darkred;
 }
 
-figcaption {
+figcaption{
     text-align: center;
     padding-bottom: 15px;
 }
