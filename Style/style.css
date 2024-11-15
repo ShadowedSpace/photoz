@@ -30,10 +30,10 @@ img{
 }
 
 .button-onhover{
-    color: darkred
+    color: darkred;
 }
 
-.figcaption{
+figcaption {
     text-align: center;
     padding-bottom: 15px;
 }
