@@ -32,3 +32,8 @@ img{
 .button-onhover{
     color: darkred
 }
+
+.figcaption{
+    text-align: center;
+    padding-bottom: 15px;
+}
