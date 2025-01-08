@@ -4,13 +4,13 @@ header{
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 15px;
-    background-color: lightsalmon;
+    background-color: rgb(200,200,200);
     box-sizing: border-box;
     overflow: hidden;
 }
 
 body{
-    background-color: antiquewhite;
+    background-color: rgb(250,250,250);
 }
 
 img{
@@ -34,7 +34,7 @@ img{
 }
 
 .button-onhover:hover{
-    color: darkred;
+    color: white;
 }
 
 figcaption{
