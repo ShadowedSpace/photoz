@@ -25,17 +25,24 @@ img{
     text-decoration: none;
 }
 
+.button:not(:last-child)::after {
+    content: "|";
+    margin-left: 10px;
+    color: rgb(200,200,200);
+}
+
+
+.button-onhover:hover{
+    color: white;
+    text-decoration: underline;
+}
+
 .pages{
     float: right;
 }
 
 .home{
     float: left;
-}
-
-.button-onhover:hover{
-    color: white;
-    text-decoration: underline;
 }
 
 figcaption{
