@@ -26,11 +26,13 @@ img{
 
 .button:nth-child(3)::before {
     content: "|";
+    margin-left: 10px;
     color: rgb(12, 12, 12);
 }
 
 .button:nth-child(3)::after {
     content: "|";
+    margin-right: 10px;
     color: rgb(12, 12, 12);
 }
 
