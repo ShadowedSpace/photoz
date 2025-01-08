@@ -25,12 +25,17 @@ img{
     text-decoration: none;
 }
 
-.button:not(:last-child)::after {
+.button:nth-child(3)::before {
     content: "|";
     margin-left: 10px;
-    color: rgb(200,200,200);
+    color: rgb(12, 12, 12);
 }
 
+.button:nth-child(3)::after {
+    content: "|";
+    margin-left: 10px;
+    color: rgb(12, 12, 12);
+}
 
 .button-onhover:hover{
     color: white;
