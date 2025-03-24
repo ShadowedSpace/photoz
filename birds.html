@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>photoz</title>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+
+<header>
+    <a class="home button button-onhover" href="https://shadowedspace.github.io/photoz/">photoz</a>
+    <a class="pages button button-onhover" href="https://shadowedspace.github.io/photoz/contact"> About Me </a>
+    <a class="pages button button-onhover"> Travel </a>
+    <a class="pages button button-onhover" href="https://shadowedspace.github.io/photoz/birds"> Birds </a>
+
+</header>
+
+<body>
+    <div class="gallery" id="gallery"></div>
+
+        <script>
+            // List of images in the "birds" folder (update this manually or generate dynamically)
+            const imageNames = [
+                "birds1.jpg",
+                "birds2.jpg",
+                "birds3.jpg",
+                "birds4.jpg",
+                "birds5.jpg",
+                "birds6.jpg"
+            ];
+    
+        const gallery = document.getElementById("gallery");
+
+        imageNames.forEach(image => {
+            const imgElement = document.createElement("img");
+            imgElement.src = `birds/${image}`;
+            imgElement.alt = image;
+            gallery.appendChild(imgElement);
+        });
+        </script>
+    </div>
+</body>
+</html>

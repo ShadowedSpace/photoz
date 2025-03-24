@@ -26,13 +26,11 @@ img{
 
 .button:nth-child(3)::before {
     content: "|";
-    margin-left: 10px;
     color: rgb(12, 12, 12);
 }
 
 .button:nth-child(3)::after {
     content: "|";
-    margin-right: 10px;
     color: rgb(12, 12, 12);
 }
 
@@ -48,7 +46,20 @@ img{
     float: left;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 800px;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 figcaption{
     text-align: center;
     padding-bottom: 15px;
 }
+
