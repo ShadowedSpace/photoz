@@ -23,7 +23,7 @@
             const imgNames = ["birds1.jpg","birds2.jpg","birds3.jpg",
                                 "birds4.jpg","birds5.jpg","birds6.jpg"];
             const captions = ["Great Grey Heron","Blue Rock Thrush", "Black-eared Kite",
-                                "Brown-eared Bulbul", "Savannah Sparrows", "Indigo Bunting"]
+                                "Brown-eared Bulbul", "Savannah Sparrows", "Indigo Bunting"];
     
         const gallery = document.getElementById("gallery");
 
@@ -33,6 +33,7 @@
 
             const img = document.createElement("img");
             img.src = "birds/" + image;
+            img.alt = captions[index] || "Bird image";
 
             const caption = document.createElement("p");
             caption.classList.add("caption");
