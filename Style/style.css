@@ -25,12 +25,12 @@ img{
 }
 
 .button:nth-child(3)::before {
-    content: "|";
+    content: " |";
     color: rgb(12, 12, 12);
 }
 
 .button:nth-child(3)::after {
-    content: "|";
+    content: "| ";
     color: rgb(12, 12, 12);
 }
 
