@@ -60,10 +60,8 @@ img{
 }
 
 .image-row img {
-    width: 200px; /* Adjust image size */
+    /*width: 200px; /* Adjust image size */
     height: auto;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 figcaption{
