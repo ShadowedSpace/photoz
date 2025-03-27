@@ -20,22 +20,27 @@
 
         <script>
             // List of images in the "birds" folder (update this manually or generate dynamically)
-            const imageNames = [
-                "birds1.jpg",
-                "birds2.jpg",
-                "birds3.jpg",
-                "birds4.jpg",
-                "birds5.jpg",
-                "birds6.jpg"
-            ];
+            const imgNames = ["birds1.jpg","birds2.jpg","birds3.jpg",
+                                "birds4.jpg","birds5.jpg","birds6.jpg"];
+            const captions = ["Great Grey Heron","Blue Rock Thrush", "Black-eared Kite",
+                                "Brown-eared Bulbul", "Savannah Sparrows", "Indigo Bunting"]
     
         const gallery = document.getElementById("gallery");
 
-        imageNames.forEach(image => {
-            const imgElement = document.createElement("img");
-            imgElement.src = `Birds/${image}`;
-            imgElement.alt = image;
-            gallery.appendChild(imgElement);
+        imgNames.forEach(image => {
+            const imageRow = document.createElement("div");
+            imageRow.classList.add("image-row");
+
+            const img = document.createElement("img");
+            img.src = "birds/" + image;
+
+            const caption = document.createElement("p");
+            caption.classList.add("caption");
+            caption.textContent = captions[index];
+
+            imageRow.appendChild(img);
+            imageRow.appendChild(caption);
+            gallery.appendChild(imageRow);
         });
         </script>
     </div>
