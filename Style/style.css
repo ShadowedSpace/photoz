@@ -59,10 +59,10 @@ img{
     margin-bottom: 30px; /* More space between rows */
 }
 
-/*.image-row img {
+.image-row img {
     /*width: 200px; /* Adjust image size */
-    /*height: auto;*/
-/*}*/
+    height: auto;
+}
 
 figcaption{
     text-align: center;
