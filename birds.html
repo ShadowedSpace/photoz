@@ -24,24 +24,24 @@
             const captions = ["Great Grey Heron","Blue Rock Thrush", "Black-eared Kite",
                                 "Brown-eared Bulbul", "Savannah Sparrows", "Indigo Bunting"];
     
-        const gallery = document.getElementById("gallery");
+            const gallery = document.querySelector(".gallery");
 
-        imgNames.forEach((image, index) => {
-            const imageRow = document.createElement("div");
-            imageRow.classList.add("image-row");
+            imgNames.forEach((image, index) => {
+                const imageRow = document.createElement("div");
+                imageRow.classList.add("image-row");
 
-            const img = document.createElement("img");
-            img.src = "Birds/" + image;
-            img.alt = captions[index] || "Bird image";
+                const img = document.createElement("img");
+                img.src = "Birds/" + image;
+                img.alt = captions[index] || "Bird image";
 
-            const caption = document.createElement("p");
-            caption.classList.add("caption");
-            caption.textContent = captions[index];
+                const caption = document.createElement("p");
+                caption.classList.add("caption");
+                caption.textContent = captions[index];
 
-            imageRow.appendChild(img);
-            imageRow.appendChild(caption);
-            gallery.appendChild(imageRow);
-        });
+                imageRow.appendChild(img);
+                imageRow.appendChild(caption);
+                gallery.appendChild(imageRow);
+            });
         </script>
     </body>
 </html>
