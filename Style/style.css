@@ -56,16 +56,17 @@ img{
 }
 
 .image-row {
-    display: block;
-    text-align: center;
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-row img {
     width: 100%;
     height: auto;
+    max-width: 300px;
     border-radius: 8px;
-}
+  }
 
 figcaption{
     text-align: center;
