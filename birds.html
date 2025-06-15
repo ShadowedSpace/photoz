@@ -17,6 +17,7 @@
 
     <body>
     <div class="gallery"></div>
+    <div id="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src="" alt="Enlarged image"></div>
 
         <script>
             const imgNames = ["birds1.jpg","birds2.jpg","birds3.jpg",
@@ -25,7 +26,7 @@
                                 "Brown-eared Bulbul", "Savannah Sparrows", "Indigo Bunting"];
     
             const gallery = document.querySelector(".gallery");
-
+            
             imgNames.forEach((image, index) => {
                 const imageRow = document.createElement("div");
                 imageRow.classList.add("image-row");
@@ -33,6 +34,13 @@
                 const img = document.createElement("img");
                 img.src = "Birds/" + image;
                 img.alt = captions[index] || "Bird image";
+
+                img.onclick = () => {
+                    const lightbox = document.getElementById("lightbox");
+                    const lightboxImg = document.getElementById("lightbox-img");
+                    lightboxImg.src = img.src;
+                    lightbox.style.display = "flex";
+                };
 
                 const caption = document.createElement("p");
                 caption.classList.add("caption");
@@ -42,6 +50,10 @@
                 imageRow.appendChild(caption);
                 gallery.appendChild(imageRow);
             });
+
+            function closeLightbox() {
+                document.getElementById("lightbox").style.display = "none";
+            }
         </script>
     </body>
 </html>
