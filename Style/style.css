@@ -44,8 +44,8 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /*default 3 columns*/
     gap: 1rem;
-    padding: 2rem;
-    max-width: 1200px;
+    padding: 1rem;
+    max-width: none;
     margin: auto;
 }
 
@@ -64,7 +64,7 @@ body{
 img{
     width: 100%;
     height: auto;
-    margin: 10px auto;
+    margin: 10px;
     display: block;
 }
 
