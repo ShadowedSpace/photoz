@@ -46,11 +46,32 @@ img{
     float: left;
 }
 
+.hp {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*default 3 columns*/
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .hp {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .hp {
+        grid-template-columns: 1fr; /* 1 column on phones */
+    }
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 30px; /* Space between columns and rows */
-    width: 80%;
+    width: 90%;
     max-width: 800px;
     margin: auto;
 }
@@ -64,7 +85,7 @@ img{
 .image-row img {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 figcaption{
@@ -73,7 +94,7 @@ figcaption{
 }
 
 .caption {
-    flex: 1; /* Allow text to take remaining space */
+    flex: 1;
     max-width: 400px;
     font-size: 16px;
     color: #333;
