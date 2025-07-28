@@ -16,55 +16,48 @@
 </header>
 
 <body>
-    <div class = "hp">
-        <figure>
-            <img src="FrontPage/fp1.jpg" alt="Indigo Bunting on Red Tulip">
-            <figcaption> Indigo Bunting on Red Tulip </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp2.jpg" alt="Rainbow Umbrellas in Szentendre">
-            <figcaption> Rainbow Umbrellas in Szentendre </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp3.jpg" alt="Savannah Sparrows on Cattails">
-            <figcaption> Savannah Sparrows on Cattails </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp4.jpg" alt="Mirrors and Shadows">
-            <figcaption> Mirrors and Shadows </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp5.jpg" alt="Argument between Cedar and Bohemian Waxwing">
-            <figcaption> Argument between Cedar and Bohemian Waxwing </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp6.jpg" alt="Crater Lake Blues">
-            <figcaption> Crater Lake Blues </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp7.jpg" alt="Portrait of a Great Grey Heron">
-            <figcaption> Portrait of a Great Grey Heron </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp8.jpg" alt="Cozy Cottage">
-            <figcaption> Cozy Cottage </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp9.jpg" alt="Snow Geese">
-            <figcaption> Snow Geese </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp10.jpg" alt="Through the Handlebars">
-            <figcaption> Through the Handlebars </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp11.jpg" alt="Black-eared Kite">
-            <figcaption> Black-eared Kite </figcaption>
-        </figure>
-        <figure>
-            <img src="FrontPage/fp12.jpg" alt="Blue Sky, Blue Earth">
-            <figcaption> Blue Sky, Blue Earth </figcaption>
-        </figure>
-    </div>
+    <div class="fp"></div>
+    <div id="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src="" alt="Enlarged image"></div>
+
+    <script>
+        const imgNames = ["fp1.jpg", "fp2.jpg", "fp3.jpg", 
+        "fp4.jpg", "fp5.jpg", "fp6.jpg", 
+        "fp7.jpg", "fp8.jpg", "fp9.jpg", 
+        "fp10.jpg", "fp11.jpg", "fp12.jpg"];
+
+        const captions = ["Indigo Bunting of Tulip", "Rainbow Umbrellas in Szentendre", "Savannah Sparrows on Cattails",
+            "Mirrors and Shadows", "Waxwings Waging War", "Crater Lake Blues", "Portrait of a Great Grey Heron",
+            "Cozy Cottage", "Snow Geese", "Through the Handlebars", "Black-eared Kite", "Blue Sky, Blue Earth"];
+
+          const gallery = document.querySelector(".fp");
+
+        images.forEach(({ src, caption }) => {
+            const figure = document.createElement("figure");
+
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = caption;
+            img.onclick = () => openLightbox(src);
+
+            const figcaption = document.createElement("figcaption");
+            figcaption.textContent = caption;
+
+            figure.appendChild(img);
+            figure.appendChild(figcaption);
+            gallery.appendChild(figure);
+        });
+
+        function openLightbox(src) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            lightboxImg.src = src;
+            lightbox.style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+    </script>
 </body>
 </html>
