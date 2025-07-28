@@ -43,7 +43,7 @@
             const img = document.createElement("img");
             img.src = "FrontPage/" + src;
             img.alt = caption;
-            img.onclick = () => openLightbox(src);
+            img.onclick = () => openLightbox(img.src);
 
             const figcaption = document.createElement("figcaption");
             figcaption.textContent = caption;
