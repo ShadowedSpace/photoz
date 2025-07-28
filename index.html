@@ -20,18 +20,24 @@
     <div id="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src="" alt="Enlarged image"></div>
 
     <script>
-        const imgNames = ["fp1.jpg", "fp2.jpg", "fp3.jpg", 
-        "fp4.jpg", "fp5.jpg", "fp6.jpg", 
-        "fp7.jpg", "fp8.jpg", "fp9.jpg", 
-        "fp10.jpg", "fp11.jpg", "fp12.jpg"];
+        const imgs = [
+            {src: "fp1.jpg", caption: "Indigo Bunting on Tulip"},
+            {src: "fp2.jpg", caption: "Rainbow Umbrellas in Szentendre"},
+            {src: "fp3.jpg", caption: "Savannah Sparrows on Cattails"},
+            {src: "fp4.jpg", caption: "Mirros and Shadows"},
+            {src: "fp5.jpg", caption: "Waxwings Waging War"},
+            {src: "fp6.jpg", caption: "Crater Lake Blues"},
+            {src: "fp7.jpg", caption: "Portrait of a Great Grey Heron"},
+            {src: "fp8.jpg", caption: "Cozy Winter Cottage"},
+            {src: "fp9.jpg", caption: "Snow Geese"},
+            {src: "fp10.jpg", caption: "Through Handlebars"},
+            {src: "fp11.jpg", caption: "Black-eared Kite"},
+            {src: "fp12.jpg", caption: "Blue Sky, Blue Earth"},
+        ]
 
-        const captions = ["Indigo Bunting of Tulip", "Rainbow Umbrellas in Szentendre", "Savannah Sparrows on Cattails",
-            "Mirrors and Shadows", "Waxwings Waging War", "Crater Lake Blues", "Portrait of a Great Grey Heron",
-            "Cozy Cottage", "Snow Geese", "Through the Handlebars", "Black-eared Kite", "Blue Sky, Blue Earth"];
+        const gallery = document.querySelector(".fp");
 
-          const gallery = document.querySelector(".fp");
-
-        imgNames.forEach(({ src, caption }) => {
+        imgs.forEach(({ src, caption }) => {
             const figure = document.createElement("figure");
 
             const img = document.createElement("img");
