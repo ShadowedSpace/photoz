@@ -20,35 +20,43 @@
     <div id="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src="" alt="Enlarged image"></div>
 
         <script>
-            const imgNames = ["birds1.jpg","birds2.jpg","birds3.jpg",
-                                "birds4.jpg","birds5.jpg","birds6.jpg"];
-            const captions = ["Great Grey Heron","Blue Rock Thrush", "Black-eared Kite",
-                                "Brown-eared Bulbul", "Savannah Sparrows", "Indigo Bunting"];
+            const imgs = [
+                {src: "birds1.jpg", caption: "Great Grey Heron"},
+                {src: "birds2.jpg", caption: "Blue Rock Thrush"},
+            ]
     
-            const gallery = document.querySelector(".gallery");
-            
-            imgNames.forEach((image, index) => {
-                const imageRow = document.createElement("div");
-                imageRow.classList.add("image-row");
+            const gallery = document.querySelector(".birds-gallery");
 
-                const img = document.createElement("img");
-                img.src = "Birds/" + image;
-                img.alt = captions[index] || "Bird image";
+            birds.forEach((bird, i) => {
+            const row = document.createElement("div");
+            row.className = "row";
 
-                img.onclick = () => {
-                    const lightbox = document.getElementById("lightbox");
-                    const lightboxImg = document.getElementById("lightbox-img");
-                    lightboxImg.src = img.src;
-                    lightbox.style.display = "flex";
-                };
+            const img = document.createElement("img");
+            img.src = bird.src;
+            img.alt = bird.caption;
 
-                const caption = document.createElement("p");
-                caption.classList.add("caption");
-                caption.textContent = captions[index];
+            const caption = document.createElement("div");
+            caption.className = "caption";
+            caption.textContent = bird.caption;
 
-                imageRow.appendChild(img);
-                imageRow.appendChild(caption);
-                gallery.appendChild(imageRow);
+            // Alternate order
+            if (i % 2 === 0) {
+                row.appendChild(img);
+                row.appendChild(caption);
+            } else {
+                row.appendChild(caption);
+                row.appendChild(img);
+            }
+
+            // Lightbox functionality
+            img.onclick = () => {
+                const lightbox = document.getElementById("lightbox");
+                const lightboxImg = document.getElementById("lightbox-img");
+                lightboxImg.src = img.src;
+                lightbox.style.display = "flex";
+            };
+
+            gallery.appendChild(row);
             });
 
             function closeLightbox() {
