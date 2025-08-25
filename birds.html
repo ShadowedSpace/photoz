@@ -32,7 +32,7 @@
             row.className = "row";
 
             const img = document.createElement("img");
-            img.src = bird.src;
+            img.src = "Birds/" + bird.src;
             img.alt = bird.caption;
 
             const caption = document.createElement("div");
@@ -57,7 +57,7 @@
             };
 
             console.log(row)
-            
+
             gallery.appendChild(row);
             });
 
