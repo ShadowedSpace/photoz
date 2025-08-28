@@ -22,14 +22,13 @@
         <script>
             const imgs = [
                 {src: "birds1.jpg", caption: "Great Grey Heron"},
-                {src: "birds2.jpg", caption: "Blue Rock Thrush"},
+                {src: "birds2.jpg", caption: "Brown-eared Bulbul"},
             ]
     
             const gallery = document.querySelector(".gallery");
 
             imgs.forEach((bird, i) => {
             const row = document.createElement("div");
-            row.className = "row";
 
             const img = document.createElement("img");
             img.src = "Birds/" + bird.src;
@@ -41,9 +40,11 @@
 
             // Alternate order
             if (i % 2 === 0) {
+                row.className = "right row"
                 row.appendChild(img);
                 row.appendChild(caption);
             } else {
+                row.className = "row"
                 row.appendChild(caption);
                 row.appendChild(img);
             }

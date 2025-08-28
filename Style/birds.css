@@ -1,0 +1,20 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.row img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.caption {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.row.right {
+  flex-direction: row-reverse;
+}
