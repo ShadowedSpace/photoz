@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>photoz</title>
         <link rel="stylesheet" href="Style/style.css">
+        <link rel="stylesheet" href="Style/birds.css">
     </head>
 
     <header>
@@ -27,8 +28,9 @@
     
             const gallery = document.querySelector(".gallery");
 
-            imgs.forEach((bird, i) => {
+        imgs.forEach((bird, i) => {
             const row = document.createElement("div");
+            row.className = (i % 2 === 0) ? "row" : "row right";
 
             const img = document.createElement("img");
             img.src = "Birds/" + bird.src;
@@ -38,33 +40,17 @@
             caption.className = "caption";
             caption.textContent = bird.caption;
 
-            // Alternate order
-            if (i % 2 === 0) {
-                row.className = "right row"
-                row.appendChild(img);
-                row.appendChild(caption);
-            } else {
-                row.className = "row"
-                row.appendChild(caption);
-                row.appendChild(img);
-            }
+            row.appendChild(img);
+            row.appendChild(caption);
 
-            // Lightbox functionality
+            // Lightbox
             img.onclick = () => {
-                const lightbox = document.getElementById("lightbox");
-                const lightboxImg = document.getElementById("lightbox-img");
-                lightboxImg.src = img.src;
-                lightbox.style.display = "flex";
+                document.getElementById("lightbox-img").src = img.src;
+                document.getElementById("lightbox").style.display = "flex";
             };
 
-            console.log(row)
-
             gallery.appendChild(row);
-            });
-
-            function closeLightbox() {
-                document.getElementById("lightbox").style.display = "none";
-            }
+        });
         </script>
     </body>
 </html>
