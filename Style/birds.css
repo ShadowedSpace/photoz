@@ -1,27 +1,30 @@
 .gallery {
   display: flex;
   flex-direction: column; /* stack rows vertically */
-  gap: 2rem; /* space between rows */
+  gap: 2rem; /* spacing between rows */
+  max-width: 900px;
+  margin: 0 auto; /* center gallery */
 }
 
 .row {
   display: flex;
   align-items: center;
-  justify-content: center; /* center in page */
-  border: 5px solid black;
+  gap: 1rem;
+}
+
+.row.reverse {
+  flex-direction: row-reverse; /* flip image/caption order */
 }
 
 .row img {
-  max-width: 300px;
+  max-width: 300px; /* or whatever size you like */
   height: auto;
+  border-radius: 0; /* force square corners */
+  cursor: pointer;
 }
 
 .caption {
-  margin: 0 1rem;
   text-align: center;
-}
-
-/* Alternate row flips image/caption */
-.row.reverse {
-  flex-direction: row-reverse;
+  flex: 1; /* take remaining space */
+  font-size: 1rem;
 }
