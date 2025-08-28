@@ -1,20 +1,27 @@
+.gallery {
+  display: flex;
+  flex-direction: column; /* stack rows vertically */
+  gap: 2rem; /* space between rows */
+}
+
 .row {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center; /* center in page */
+  border: 5px solid black;
 }
 
 .row img {
-  max-width: 50%;
+  max-width: 300px;
   height: auto;
-  border-radius: 8px;
 }
 
 .caption {
-  flex: 1;
-  font-size: 1rem;
+  margin: 0 1rem;
+  text-align: center;
 }
 
-.row.right {
+/* Alternate row flips image/caption */
+.row.reverse {
   flex-direction: row-reverse;
 }
