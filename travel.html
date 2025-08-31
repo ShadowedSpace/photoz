@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>photoz</title>
+        <link rel="stylesheet" href="Style/style.css">
+        <link rel="stylesheet" href="Style/birds.css">
+    </head>
+
+    <header>
+        <a class="home button button-onhover" href="https://shadowedspace.github.io/photoz/">photoz</a>
+        <a class="pages button button-onhover" href="https://shadowedspace.github.io/photoz/contact"> About Me </a>
+        <a class="pages button button-onhover"> Travel </a>
+        <a class="pages button button-onhover" href="https://shadowedspace.github.io/photoz/birds.html"> Birds </a>
+
+    </header>
+
+    <body>
+    <div class="gallery"></div>
+    <div id="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src="" alt="Enlarged image"></div>
+
+        <script>
+            const imgs = [
+                {src: "travel1.jpg", caption: "Lake Como, Italy"},
+                {src: "travel2.jpg", caption: "Zakopone, Poland"},
+                {src: "travel3.jpg", caption: "Florence, Italy"},
+                {src: "travel4.jpg", caption: "Copenhagen, Denmark"},
+                {src: "travel5.jpg", caption: "Florence, Italy"},
+            ]
+    
+            const gallery = document.querySelector(".gallery");
+
+        imgs.forEach((destination, i) => {
+            const row = document.createElement("div");
+            row.className = (i % 2 === 0) ? "row" : "row reverse";
+
+            const img = document.createElement("img");
+            img.src = "Travel/" + destination.src;
+            img.alt = destination.caption;
+
+            const caption = document.createElement("div");
+            caption.className = "caption";
+            caption.textContent = destination.caption;
+
+            row.appendChild(img);
+            row.appendChild(caption);
+
+            // Lightbox
+            img.onclick = () => {
+                document.getElementById("lightbox-img").src = img.src;
+                document.getElementById("lightbox").style.display = "flex";
+            };
+
+            gallery.appendChild(row);
+        });
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+}
+        </script>
+    </body>
+</html>
