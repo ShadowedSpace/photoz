@@ -56,8 +56,14 @@
         });
 
         function closeLightbox() {
-            document.getElementById("lightbox").style.display = "none";
-}
+            document.getElementById("lightbox").style.display = "none";}
+        
+        document.querySelectorAll(".row img").forEach(img => {
+        img.onload = () => {
+            if (img.naturalWidth > img.naturalHeight) {
+            img.classList.add("landscape");
+            }};
+        });
         </script>
     </body>
 </html>
