@@ -63,21 +63,6 @@
         function closeLightbox() {
             document.getElementById("lightbox").style.display = "none";}
 
-        document.querySelectorAll(".row img").forEach(img => {
-            img.decode().then(() => {
-                if (img.naturalWidth > img.naturalHeight) {
-                    img.classList.add("landscape");
-                } else {
-                    img.classList.add("portrait");
-                }
-            }).catch(() => {
-                // fallback if decode fails
-                if (img.naturalWidth > img.naturalHeight) {
-                    img.classList.add("landscape");
-                }
-            });
-        });
-
         </script>
     </body>
 </html>

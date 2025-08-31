@@ -29,15 +29,3 @@
   flex: 1; /* take remaining space */
   font-size: 1rem;
 }
-
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;   /* stack instead of side-by-side */
-    text-align: center;       /* center caption under image */
-  }
-
-  .row img {
-    max-width: 100%;          /* make it responsive */
-    height: auto;
-  }
-}
