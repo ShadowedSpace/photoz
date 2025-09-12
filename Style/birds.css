@@ -18,7 +18,10 @@
 }
 
 .row img {
-  max-width: 300px; /* or whatever size you like */
+  max-width: 300px;
+  max-height: 300 px;
+  width: auto;
+  height: auto;
   height: auto;
   border-radius: 0; /* force square corners */
   cursor: pointer;
