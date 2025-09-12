@@ -24,6 +24,7 @@
   height: auto;
   height: auto;
   border-radius: 0; /* force square corners */
+  object-fit: contain;
   cursor: pointer;
 }
 
