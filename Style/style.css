@@ -25,6 +25,10 @@ body{
     padding-top: 80px;
 }
 
+body.lightbox-open header {
+    display: none;
+}
+
 .button{
     color: black;
     text-decoration: none;
