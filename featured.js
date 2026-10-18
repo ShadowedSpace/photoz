@@ -7,14 +7,14 @@ const featured = [
 
 let currentPhoto = 0;
 
-const featuredPhoto = document.getElementById("featured");
+const featuredPhoto = document.getElementById("featured-photo");
 const photoCounter = document.getElementById("photo-counter");
 
 function showFeaturedPhoto(index) {
     currentPhoto = (index + featured.length)
         % featured.length;
 
-    featuredPhoto.src = featuredPhoto[currentPhoto];
+    featuredPhoto.src = featured[currentPhoto];
     photoCounter.textContent =
         `${currentPhoto + 1} / ${featured.length}`;
 }
