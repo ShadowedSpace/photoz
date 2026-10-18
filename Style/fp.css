@@ -1,7 +1,7 @@
 /* Featured photo carousel */
 .featured {
     text-align: center;
-    background-color: #333333;
+    background-color: #666666;
     color: white;
     padding: 30px 20px;
     margin: 0;
@@ -19,6 +19,8 @@
     height: 400px;
     object-fit: contain;
     cursor: pointer;
+    border: 5px solid black;
+    box-sizing: border-box;
 }
 
 .carousel button {
