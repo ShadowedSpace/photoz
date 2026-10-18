@@ -1,3 +1,44 @@
+/* Featured photo carousel */
+.featured {
+    text-align: center;
+    background-color: #333333;
+    color: white;
+    padding: 30px 20px;
+    margin: 0;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#featured-photo {
+    width: 50%;
+    height: 400px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.carousel button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.carousel button:hover {
+    color: #bbbbbb;
+}
+
+#photo-counter {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}
 
 .image-row {
     display: flex;

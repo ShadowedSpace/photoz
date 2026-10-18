@@ -27,6 +27,6 @@ document.getElementById("prev-photo").addEventListener("click", () => {
     showFeaturedPhoto(currentPhoto - 1);
 });
 
-recentPhoto.addEventListener("click", () => {
-    openLightbox(recentPhoto.src);
+featuredPhoto.addEventListener("click", () => {
+    openLightbox(featuredPhoto.src);
 });
