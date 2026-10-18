@@ -20,6 +20,24 @@
     <div class="fp"></div>
     <div id="lightbox" onclick="closeLightbox()"><img id="lightbox-img" src="" alt="Enlarged image"></div>
 
+    <section class="featured">
+        <h2>Featured</h2>
+
+        <div class="carousel">
+            <button id="prev-photo" aria-label="Previous photo">
+                &#10094;
+            </button>
+
+            <img id="featured-photo" src="Featured/featured1.jpg">
+
+            <button id="next-photo" aria-label="Next photo">
+                &#10095;
+            </button>
+        </div>
+
+        <p id="photo-counter">1 / 3</p>
+    </section>
+
     <script>
         const imgs = [
             {src: "fp1.jpg", caption: "Indigo Bunting on Tulip"},
@@ -58,5 +76,6 @@
         });
     </script>
     <script src="lightbox.js"></script>
+    <script src="featured.js"></script>
 </body>
 </html>
